@@ -1,20 +1,136 @@
-﻿// matrix_reload.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
-#include <iostream>
-
-int main()
+﻿#include <iostream>
+using namespace std;
+class matrix
 {
-    std::cout << "Hello World!\n";
+public:
+	matrix(int, int);
+	matrix(double**, int, int);
+	matrix(const matrix&);
+	~matrix();
+	friend  matrix  operator+(const matrix&, const matrix&);
+	matrix& operator=(const matrix &);
+	friend ostream& operator<<(ostream& output, const matrix&);
+	friend istream& operator>>(istream& input, matrix&);
+private:
+	int m, n;
+	double** a;
+};
+
+matrix::matrix(int m, int n)
+{
+	this->m = m; this->n = n;
+	a = new double*[m];
+	for (int i = 0; i < m; i++)
+	{
+		a[i] = new double[n];
+	}
 }
 
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
+matrix::matrix(const matrix& M) {
+	this->m = M.m; this->n = M.n;
+	this->a = new double*[m];
+	for (int i = 0; i < m; i++)
+	{
+		this->a[i] = new double[n];
+	}
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++)
+			this->a[i][j] = M.a[i][j];
+	}
+}
 
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+matrix::matrix(double** T, int m, int n)
+{
+	this->m = m; this->n = n;
+	a = T;
+}
+
+matrix::~matrix()
+{
+	for (int i = 0; i < m; i++)
+	{
+		if (a[i] != NULL)
+		{
+			delete[]a[i];
+			a[i] = NULL;
+		}
+	}
+	delete[]a;
+	a = NULL;
+}
+matrix& matrix::operator=(const matrix & A)
+{
+	m = A.m; n = A.n;
+	for (int i = 0; i < A.m; i++)
+	{
+		for (int k = 0; k < A.n; k++)
+		{
+			a[i][k] = A.a[i][k];
+		}
+	}
+	return *this;
+	// TODO: 在此处插入 return 语句
+}
+
+
+matrix   operator+(const matrix& A, const matrix& B)
+{
+	matrix C(A.m, A.n);
+	/*double** T;
+	T = new double* [A.m];
+	for (int i = 0; i < A.m; i++)
+	{
+		T[i] = new double[A.n];
+	}*/
+	for (int i = 0; i < A.m; i++)
+	{
+		for (int k = 0; k < A.n; k++)
+		{
+			C.a[i][k] = A.a[i][k] + B.a[i][k];
+			//T[i][k] = A.a[i][k] + B.a[i][k];
+		}
+	}
+	const matrix D = C;
+	return D; //不能像注释部分这样写，因为一旦出了函数就会调用析构函数，就会导致赋值时出错！！！（找不到指针）
+	//return matrix(T, A.m, A.n); //此处重载了构造函数
+
+}
+
+ostream& operator<<(ostream& output, const matrix& A)
+{
+	for (int i = 0; i < A.m; i++)
+	{
+		for (int k = 0; k < A.n; k++)
+		{
+			cout << A.a[i][k] << "  ";
+		}
+		cout << endl;
+	}
+	return output;
+	// TODO: 在此处插入 return 语句
+}
+
+istream& operator>>(istream& input, matrix& A)
+{
+
+	for (int i = 0; i < A.m; i++)
+	{
+		for (int k = 0; k < A.n; k++)
+		{
+			cin >> A.a[i][k];
+		}
+	}
+	return input;
+	// TODO: 在此处插入 return 语句
+}
+int main()
+{
+	int m, n;
+	cout << "enter m: "; cin >> m; cout << "enter n: "; cin >> n;
+	matrix A(m, n); cout << "Please enter this " << m << " x " << n << " matrix" << endl; cin >> A;
+	matrix B(m, n); cout << "Please enter this " << m << " x " << n << " matrix" << endl; cin >> B;
+	cout << "C=A+B=" << endl;
+	matrix C(m, n);
+	C = (A + B);
+	cout << (A + B) << endl;
+}
