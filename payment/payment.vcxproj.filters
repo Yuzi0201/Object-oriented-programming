@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="matrix_reload.cpp">
+    <ClCompile Include="payment.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
