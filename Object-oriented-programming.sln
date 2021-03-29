@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28307.1231
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "matrix_reload", "matrix_reload\matrix_reload.vcxproj", "{1D6EC451-F244-42AF-96A4-E00465AEFA09}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.vcxproj", "{051FA06D-C6B8-40A0-9FB3-97C6AA5DE427}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "payment", "payment\payment.vcxproj", "{CD215FE2-8947-4F3A-8B34-AE2E8AF949CC}"
 EndProject
 Global
@@ -25,14 +23,6 @@ Global
 		{1D6EC451-F244-42AF-96A4-E00465AEFA09}.Release|x64.Build.0 = Release|x64
 		{1D6EC451-F244-42AF-96A4-E00465AEFA09}.Release|x86.ActiveCfg = Release|Win32
 		{1D6EC451-F244-42AF-96A4-E00465AEFA09}.Release|x86.Build.0 = Release|Win32
-		{051FA06D-C6B8-40A0-9FB3-97C6AA5DE427}.Debug|x64.ActiveCfg = Debug|x64
-		{051FA06D-C6B8-40A0-9FB3-97C6AA5DE427}.Debug|x64.Build.0 = Debug|x64
-		{051FA06D-C6B8-40A0-9FB3-97C6AA5DE427}.Debug|x86.ActiveCfg = Debug|Win32
-		{051FA06D-C6B8-40A0-9FB3-97C6AA5DE427}.Debug|x86.Build.0 = Debug|Win32
-		{051FA06D-C6B8-40A0-9FB3-97C6AA5DE427}.Release|x64.ActiveCfg = Release|x64
-		{051FA06D-C6B8-40A0-9FB3-97C6AA5DE427}.Release|x64.Build.0 = Release|x64
-		{051FA06D-C6B8-40A0-9FB3-97C6AA5DE427}.Release|x86.ActiveCfg = Release|Win32
-		{051FA06D-C6B8-40A0-9FB3-97C6AA5DE427}.Release|x86.Build.0 = Release|Win32
 		{CD215FE2-8947-4F3A-8B34-AE2E8AF949CC}.Debug|x64.ActiveCfg = Debug|x64
 		{CD215FE2-8947-4F3A-8B34-AE2E8AF949CC}.Debug|x64.Build.0 = Debug|x64
 		{CD215FE2-8947-4F3A-8B34-AE2E8AF949CC}.Debug|x86.ActiveCfg = Debug|Win32
