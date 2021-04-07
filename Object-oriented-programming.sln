@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "matrix_reload", "matrix_rel
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "payment", "payment\payment.vcxproj", "{CD215FE2-8947-4F3A-8B34-AE2E8AF949CC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "payment_Base_class_pointer", "payment_Base_class_pointer\payment_Base_class_pointer.vcxproj", "{761CE87B-44F5-4AAC-BD53-346D96D016C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{CD215FE2-8947-4F3A-8B34-AE2E8AF949CC}.Release|x64.Build.0 = Release|x64
 		{CD215FE2-8947-4F3A-8B34-AE2E8AF949CC}.Release|x86.ActiveCfg = Release|Win32
 		{CD215FE2-8947-4F3A-8B34-AE2E8AF949CC}.Release|x86.Build.0 = Release|Win32
+		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Debug|x64.ActiveCfg = Debug|x64
+		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Debug|x64.Build.0 = Debug|x64
+		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Debug|x86.ActiveCfg = Debug|Win32
+		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Debug|x86.Build.0 = Debug|Win32
+		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Release|x64.ActiveCfg = Release|x64
+		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Release|x64.Build.0 = Release|x64
+		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Release|x86.ActiveCfg = Release|Win32
+		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
