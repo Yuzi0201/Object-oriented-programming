@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "payment", "payment\payment.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "payment_Base_class_pointer", "payment_Base_class_pointer\payment_Base_class_pointer.vcxproj", "{761CE87B-44F5-4AAC-BD53-346D96D016C2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Virtual_Function", "Virtual_Function\Virtual_Function.vcxproj", "{BDF50E44-D210-4830-BF2E-FD5F81CDFF67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Release|x64.Build.0 = Release|x64
 		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Release|x86.ActiveCfg = Release|Win32
 		{761CE87B-44F5-4AAC-BD53-346D96D016C2}.Release|x86.Build.0 = Release|Win32
+		{BDF50E44-D210-4830-BF2E-FD5F81CDFF67}.Debug|x64.ActiveCfg = Debug|x64
+		{BDF50E44-D210-4830-BF2E-FD5F81CDFF67}.Debug|x64.Build.0 = Debug|x64
+		{BDF50E44-D210-4830-BF2E-FD5F81CDFF67}.Debug|x86.ActiveCfg = Debug|Win32
+		{BDF50E44-D210-4830-BF2E-FD5F81CDFF67}.Debug|x86.Build.0 = Debug|Win32
+		{BDF50E44-D210-4830-BF2E-FD5F81CDFF67}.Release|x64.ActiveCfg = Release|x64
+		{BDF50E44-D210-4830-BF2E-FD5F81CDFF67}.Release|x64.Build.0 = Release|x64
+		{BDF50E44-D210-4830-BF2E-FD5F81CDFF67}.Release|x86.ActiveCfg = Release|Win32
+		{BDF50E44-D210-4830-BF2E-FD5F81CDFF67}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
